@@ -73,27 +73,28 @@ Users can interactively input customer information and instantly see:
 ## 💻 Run Locally
 
 1️⃣ Clone the Repository
-git clone https://github.com/joshiyj/customer-churn-prediction.git
-cd customer-churn-prediction
+
+`git clone https://github.com/joshiyj/customer-churn-prediction.git`
+`cd customer-churn-prediction`
 
 2️⃣ Create and Activate a Virtual Environment
 
 For Windows:
 
-python -m venv venv
-venv\Scripts\activate
+`python -m venv venv`
+`venv\Scripts\activate`
 
 
 For macOS/Linux:
 
-python3 -m venv venv
-source venv/bin/activate
+`python3 -m venv venv`
+`source venv/bin/activate`
 
 3️⃣ Install Dependencies
-pip install -r requirements.txt
+`pip install -r requirements.txt`
 
 4️⃣ Run the Streamlit App
-streamlit run app.py
+`streamlit run app.py`
 
 
 After running the command, Streamlit will launch the app and display a local URL (something like http://localhost:8501/).
