@@ -66,7 +66,7 @@ Users can interactively input customer information and instantly see:
 
 ## 📸UI/App :
 <img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/6103e46d-bfe1-4783-85ee-c7d647b10299" />
-<img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/70fe5af0-9418-4cc2-9b98-5ec14b1208e4" />
+<img width="1919" height="762" alt="image" src="https://github.com/user-attachments/assets/d589da24-832c-4f8f-bb77-6fdb78dece3f" />
 
 ---
 
