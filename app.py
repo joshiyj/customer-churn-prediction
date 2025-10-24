@@ -36,9 +36,9 @@ st.markdown("""
 
         /* Background */
         .main {
-            background: linear-gradient(to top right, #000428, #004e92);
-            color: #ffffff;
-        }
+    background: #111827; /* A nice dark gray */
+    color: #ffffff;
+}
 
         /* Main title */
         h1 {
@@ -221,3 +221,4 @@ with st.container():
 
     # Close the custom container div
     st.markdown('</div>', unsafe_allow_html=True)
+
