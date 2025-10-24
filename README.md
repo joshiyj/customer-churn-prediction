@@ -3,7 +3,7 @@
 A Machine Learning–powered **Customer Churn Prediction** web application built with **Streamlit**.  
 It predicts whether a telecom customer is likely to **churn** or **stay**, based on their account and service details.
 
-🔗 **Live App:** [Customer Churn Prediction](https://customer-churn-prediction-n7ol7q2ums7twpuzbt85iz.streamlit.app/)
+🔗 **Live App:** [Customer Churn Prediction](https://customer-churn-prediction-ml-capstone.streamlit.app/)
 
 ---
 
@@ -64,9 +64,37 @@ Users can interactively input customer information and instantly see:
 
 ---
 
+## 📸UI/App :
+<img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/6103e46d-bfe1-4783-85ee-c7d647b10299" />
+<img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/70fe5af0-9418-4cc2-9b98-5ec14b1208e4" />
+
+---
+
 ## 💻 Run Locally
 
-### 1️⃣ Clone the repository
-```bash
-git clone https://github.com/<your-username>/customer-churn-streamlit.git
-cd customer-churn-streamlit
+1️⃣ Clone the Repository
+git clone https://github.com/joshiyj/customer-churn-prediction.git
+cd customer-churn-prediction
+
+2️⃣ Create and Activate a Virtual Environment
+
+For Windows:
+
+python -m venv venv
+venv\Scripts\activate
+
+
+For macOS/Linux:
+
+python3 -m venv venv
+source venv/bin/activate
+
+3️⃣ Install Dependencies
+pip install -r requirements.txt
+
+4️⃣ Run the Streamlit App
+streamlit run app.py
+
+
+After running the command, Streamlit will launch the app and display a local URL (something like http://localhost:8501/).
+Open that link in your browser to interact with the Customer Churn Prediction App.
