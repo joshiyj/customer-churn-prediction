@@ -3,7 +3,7 @@
 A Machine Learning–powered **Customer Churn Prediction** web application built with **Streamlit**.  
 It predicts whether a telecom customer is likely to **churn** or **stay**, based on their account and service details.
 
-🔗 **Live App:** [Customer Churn Prediction](https://customer-churn-prediction-nqdyzjm4evcerqgh7nyue2.streamlit.app/)
+🔗 **Live App:** [Customer Churn Prediction](https://customer-churn-prediction-n7ol7q2ums7twpuzbt85iz.streamlit.app/)
 
 ---
 
