@@ -74,20 +74,20 @@ Users can interactively input customer information and instantly see:
 
 1️⃣ Clone the Repository
 
-`git clone https://github.com/joshiyj/customer-churn-prediction.git`
+`git clone https://github.com/joshiyj/customer-churn-prediction.git`  
 `cd customer-churn-prediction`
 
 2️⃣ Create and Activate a Virtual Environment
 
 For Windows:
 
-`python -m venv venv`
+`python -m venv venv`  
 `venv\Scripts\activate`
 
 
 For macOS/Linux:
 
-`python3 -m venv venv`
+`python3 -m venv venv`  
 `source venv/bin/activate`
 
 3️⃣ Install Dependencies
