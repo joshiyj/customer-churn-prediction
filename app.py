@@ -12,81 +12,91 @@ feature_names = model_data['features_names']
 encoders = pickle.load(open('encoders.pkl', 'rb'))
 
 # ---------------------------
-# Streamlit App Configuration
+# Streamlit Page Config
 # ---------------------------
 st.set_page_config(page_title="Customer Churn Prediction", page_icon="📊", layout="wide")
 
-# Custom CSS for better look
+# ---------------------------
+# Custom CSS for styling
+# ---------------------------
 st.markdown("""
     <style>
-        /* Main page styling */
+        /* Background */
         .main {
-            background-color: #F8FAFC;
-            padding: 2rem;
+            background: linear-gradient(135deg, #e0f7fa, #e3f2fd);
+            color: #0f172a;
+            font-family: "Poppins", sans-serif;
         }
+
+        /* Header */
         h1 {
-            color: #1F2937;
+            background: linear-gradient(90deg, #2563eb, #3b82f6);
+            color: white;
             text-align: center;
-            font-size: 2.2rem !important;
-            margin-bottom: 0.5rem;
+            padding: 0.8em;
+            border-radius: 12px;
+            font-size: 2rem !important;
+            margin-bottom: 0.5em;
         }
+
         h3 {
-            color: #4B5563;
             text-align: center;
-            font-weight: normal;
-            margin-bottom: 2rem;
+            color: #334155;
+            font-weight: 400;
+            margin-bottom: 2em;
         }
+
+        /* Buttons */
         .stButton>button {
             background-color: #2563EB;
             color: white;
             border: none;
-            padding: 0.6rem 1.5rem;
+            padding: 0.7rem 2rem;
             border-radius: 10px;
             font-size: 16px;
-            transition: 0.2s;
+            font-weight: 600;
+            transition: 0.2s ease-in-out;
         }
+
         .stButton>button:hover {
             background-color: #1E40AF;
+            transform: scale(1.02);
         }
+
+        /* Success / Error boxes */
         .success-box {
             background-color: #DCFCE7;
-            color: #166534;
+            color: #14532D;
             border-left: 6px solid #16A34A;
             padding: 1rem;
             border-radius: 10px;
+            font-weight: 500;
         }
+
         .error-box {
             background-color: #FEE2E2;
-            color: #991B1B;
+            color: #7F1D1D;
             border-left: 6px solid #DC2626;
             padding: 1rem;
             border-radius: 10px;
+            font-weight: 500;
         }
+
         footer {visibility: hidden;}
+        header {visibility: hidden;}
     </style>
 """, unsafe_allow_html=True)
 
 # ---------------------------
 # Header
 # ---------------------------
-st.title("📊 Customer Churn Prediction App")
-st.markdown("### Predict whether a telecom customer is likely to **Churn** or **Stay** using a trained Random Forest model.")
+st.title("📊 Customer Churn Prediction")
+st.markdown("### Enter customer details below to check whether they are **likely to churn** or **stay**.")
+
 st.divider()
 
 # ---------------------------
-# Sidebar
-# ---------------------------
-st.sidebar.image("https://cdn-icons-png.flaticon.com/512/9442/9442834.png", width=120)
-st.sidebar.markdown("### 💡 About")
-st.sidebar.info("""
-This tool helps telecom businesses identify customers at risk of churn.  
-Enter customer details on the right to see predictions in real-time.
-""")
-st.sidebar.markdown("**Model:** Random Forest Classifier")  
-st.sidebar.markdown("**Created by:** Tejas Hadge")  
-
-# ---------------------------
-# Input Layout (2 Columns)
+# Input Layout
 # ---------------------------
 col1, col2 = st.columns(2)
 
@@ -118,6 +128,8 @@ with col2:
     monthly_charges = st.number_input("Monthly Charges ($)", min_value=0.0, step=1.0)
     total_charges = st.number_input("Total Charges ($)", min_value=0.0, step=1.0)
 
+st.divider()
+
 # ---------------------------
 # Prepare input
 # ---------------------------
@@ -143,8 +155,6 @@ input_data = {
     'TotalCharges': total_charges
 }
 
-st.divider()
-
 # ---------------------------
 # Prediction Section
 # ---------------------------
@@ -164,15 +174,15 @@ if st.button("🔍 Predict Churn", use_container_width=True):
         if prediction == 1:
             st.markdown(f"""
             <div class="error-box">
-                <h4>⚠️ The customer is <b>likely to Churn</b></h4>
-                <p><b>Churn Probability:</b> {pred_prob:.2f}</p>
+                ⚠️ <b>The customer is likely to <u>Churn</u></b><br>
+                <b>Churn Probability:</b> {pred_prob:.2f}
             </div>
             """, unsafe_allow_html=True)
         else:
             st.markdown(f"""
             <div class="success-box">
-                <h4>✅ The customer will <b>Stay</b></h4>
-                <p><b>Churn Probability:</b> {pred_prob:.2f}</p>
+                ✅ <b>The customer will Stay</b><br>
+                <b>Churn Probability:</b> {pred_prob:.2f}
             </div>
             """, unsafe_allow_html=True)
 
